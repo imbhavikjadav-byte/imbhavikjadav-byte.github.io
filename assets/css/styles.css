@@ -1225,6 +1225,8 @@ section {
    fixed bottom-nav (56px) and topbar (64px).
    ========================================================================== */
 @media (max-width: 767px) {
+  section { padding-block: var(--space-7); }
+
   .hero {
     min-height: auto;
     padding-top: calc(64px + var(--space-6));
