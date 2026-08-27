@@ -1259,9 +1259,10 @@ section {
   .hero__meta-item .num { font-size: var(--fs-sm); }
   .hero__scroll-hint { display: none; } /* hero is no longer full-viewport-height on mobile */
 
-  /* "Languages spoken" stays on one line at this width while its
-     row-mate "Core skills tracked" wraps to two — cap its width so it
-     also breaks onto two lines and the cards align. */
+  /* "Delivery methodology" and "Languages spoken" stay on one line at
+     this width while their row-mates wrap to two — cap their width so
+     they also break onto two lines and every card aligns. */
+  .about__fact:nth-child(2) .label { max-width: 7em; }
   .about__fact:last-child .label { max-width: 5.5em; }
 }
 
