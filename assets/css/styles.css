@@ -573,7 +573,7 @@ section {
   align-items: flex-end;
 }
 .about__fact .num--text {
-  font-size: var(--fs-lg);
+  font-size: 1.5rem;
   white-space: nowrap;
 }
 .about__fact .label {
