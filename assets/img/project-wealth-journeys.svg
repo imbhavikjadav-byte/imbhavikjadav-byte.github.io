@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" role="img" aria-labelledby="t1">
+<title id="t1">Digital Wealth Journeys</title>
+<g stroke="#c8842c" stroke-width="2" opacity="0.9" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="55,190 140,130 210,155 280,90 350,120 420,60"/>
+<circle cx="140" cy="130" r="6" fill="#c8842c" stroke="none"/>
+<circle cx="280" cy="90" r="6" fill="#c8842c" stroke="none"/>
+<circle cx="420" cy="60" r="6" fill="#c8842c" stroke="none"/>
+</g>
+<line x1="55" y1="215" x2="420" y2="215" stroke="#c8842c" stroke-width="1.2" opacity="0.35"/>
+</svg>

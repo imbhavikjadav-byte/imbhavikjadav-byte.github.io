@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" role="img" aria-labelledby="t4">
+<title id="t4">FreightNexus truck tendering marketplace</title>
+<g fill="none" stroke="#c8842c" stroke-width="2" opacity="0.85" stroke-linecap="round" stroke-linejoin="round">
+<rect x="105" y="108" width="90" height="50" rx="6"/>
+<rect x="195" y="94" width="52" height="64" rx="6"/>
+<circle cx="140" cy="168" r="12"/>
+<circle cx="216" cy="168" r="12"/>
+<path d="M255 135 H400" stroke-dasharray="6 9"/>
+<circle cx="290" cy="135" r="5" fill="#c8842c" stroke="none"/>
+<circle cx="345" cy="135" r="5" fill="#c8842c" stroke="none"/>
+<circle cx="395" cy="135" r="5" fill="#c8842c" stroke="none"/>
+</g>
+</svg>

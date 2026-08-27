@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" role="img" aria-labelledby="t3">
+<title id="t3">Legacy to Cloud Migration</title>
+<g fill="none" stroke="#c8842c" stroke-width="2" opacity="0.9" stroke-linecap="round" stroke-linejoin="round">
+<rect x="80" y="95" width="85" height="24" rx="5"/>
+<rect x="80" y="123" width="85" height="24" rx="5"/>
+<rect x="80" y="151" width="85" height="24" rx="5"/>
+<circle cx="93" cy="107" r="2.5" fill="#c8842c" stroke="none"/>
+<circle cx="93" cy="135" r="2.5" fill="#c8842c" stroke="none"/>
+<circle cx="93" cy="163" r="2.5" fill="#c8842c" stroke="none"/>
+</g>
+<path d="M185 135 H285" stroke="#c8842c" stroke-width="2" stroke-dasharray="7 7" opacity="0.85" fill="none"/>
+<path d="M273 123 l14 12 -14 12" fill="none" stroke="#c8842c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<path d="M330 176c-16 0-27-12-27-25 0-14 11-26 26-26 3-16 17-27 33-27 18 0 33 13 35 30 12 2 21 12 21 24 0 13-11 24-25 24Z"
+  fill="none" stroke="#c8842c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+</svg>

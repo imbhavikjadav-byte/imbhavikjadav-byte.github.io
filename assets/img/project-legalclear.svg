@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" role="img" aria-labelledby="t5">
+<title id="t5">LegalClear plain-English document summaries</title>
+<g fill="none" stroke="#c8842c" stroke-width="2" opacity="0.85" stroke-linecap="round" stroke-linejoin="round">
+<rect x="120" y="75" width="90" height="120" rx="8"/>
+<path d="M138 100h54M138 120h54M138 140h36"/>
+<rect x="245" y="92" width="130" height="16" rx="4"/>
+<rect x="245" y="126" width="105" height="16" rx="4"/>
+<rect x="245" y="160" width="120" height="16" rx="4"/>
+</g>
+<circle cx="266" cy="100" r="5" fill="#c8842c" stroke="none" opacity="0.9"/>
+<circle cx="266" cy="134" r="5" fill="#dc7a2f" stroke="none" opacity="0.75"/>
+<circle cx="266" cy="168" r="5" fill="#c8842c" stroke="none" opacity="0.9"/>
+</svg>
