@@ -1243,9 +1243,9 @@ section {
   section { padding-block: var(--space-7); }
 
   .hero {
-    min-height: auto;
+    min-height: calc(100dvh - 56px); /* fills the screen above the fixed bottom-nav */
     padding-top: calc(64px + var(--space-5));
-    padding-bottom: var(--space-5);
+    padding-bottom: var(--space-6);
   }
   .hero__portrait--inline { width: 64px; border-radius: var(--radius-sm); }
   .hero__portrait--inline img { border-radius: var(--radius-sm); }
