@@ -93,6 +93,7 @@ body {
   font-size: var(--fs-base);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px)); /* clears the fixed mobile bottom-nav */
 }
 
 img { max-width: 100%; display: block; }
@@ -163,7 +164,7 @@ button { font: inherit; color: inherit; background: none; border: none; }
 
 section {
   padding-block: var(--space-9);
-  scroll-margin-top: var(--space-8);
+  scroll-margin-top: 64px; /* clears the fixed mobile topbar */
 }
 
 .section-head {
@@ -1219,6 +1220,26 @@ section {
 .back-to-top svg { width: 20px; height: 20px; }
 
 /* ==========================================================================
+   Mobile — up to 767px
+   Tighter hero rhythm so the CTA buttons land above the fold, clear of the
+   fixed bottom-nav (56px) and topbar (64px).
+   ========================================================================== */
+@media (max-width: 767px) {
+  .hero {
+    min-height: auto;
+    padding-top: calc(64px + var(--space-6));
+    padding-bottom: var(--space-6);
+  }
+  .hero__portrait { width: 88px; }
+  .hero__name { font-size: var(--fs-2xl); margin-top: var(--space-3); }
+  .hero__title { margin-top: var(--space-2); }
+  .hero__stack { margin-top: var(--space-3); }
+  .hero__pitch { margin-top: var(--space-4); font-size: var(--fs-sm); }
+  .hero__cta { margin-top: var(--space-5); }
+  .hero__meta { margin-top: var(--space-5); gap: var(--space-5); }
+}
+
+/* ==========================================================================
    Tablet — 768px+
    ========================================================================== */
 @media (min-width: 768px) {
@@ -1241,6 +1262,10 @@ section {
   .bottom-nav { display: none; }
   .mobile-nav { display: none; }
   .back-to-top { right: var(--space-7); bottom: var(--space-7); }
+
+  body { padding-bottom: 0; } /* bottom-nav is mobile-only, no clearance needed here */
+
+  section { scroll-margin-top: 0; } /* no fixed top bar on desktop — side-nav doesn't overlap content */
 
   body { padding-left: var(--nav-width); }
 
