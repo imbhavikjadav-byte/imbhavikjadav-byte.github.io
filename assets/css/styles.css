@@ -365,17 +365,24 @@ section {
 
 .hero__grid {
   display: grid;
-  gap: var(--space-8);
+  gap: var(--space-6);
   align-items: center;
 }
 
-/* Mobile/tablet: small circular portrait above the copy */
+/* Mobile/tablet: photo sits beside the name/title in one compact row */
+.hero__identity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+.hero__identity-text { min-width: 0; }
+
+/* Mobile/tablet: small portrait sits beside the name/title */
 .hero__portrait {
-  order: -1;
-  width: 112px;
+  width: 88px;
   height: auto;
   aspect-ratio: 4/5;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   overflow: hidden;
   background: linear-gradient(160deg, var(--color-navy-700), var(--color-navy-800));
   border: 2px solid rgba(200, 132, 44, 0.5);
@@ -1229,16 +1236,19 @@ section {
 
   .hero {
     min-height: auto;
-    padding-top: calc(64px + var(--space-6));
-    padding-bottom: var(--space-6);
+    padding-top: calc(64px + var(--space-5));
+    padding-bottom: var(--space-5);
   }
-  .hero__portrait { width: 88px; }
-  .hero__name { font-size: var(--fs-2xl); margin-top: var(--space-3); }
-  .hero__title { margin-top: var(--space-2); }
-  .hero__stack { margin-top: var(--space-3); }
-  .hero__pitch { margin-top: var(--space-4); font-size: var(--fs-sm); }
-  .hero__cta { margin-top: var(--space-5); }
-  .hero__meta { margin-top: var(--space-5); gap: var(--space-5); }
+  .hero__portrait { width: 64px; border-radius: var(--radius-sm); }
+  .hero__eyebrow { font-size: 0.6875rem; }
+  .hero__name { font-size: var(--fs-lg); margin-top: var(--space-1); }
+  .hero__title { font-size: var(--fs-sm); margin-top: 2px; }
+  .hero__stack { margin-top: var(--space-4); }
+  .hero__pitch { margin-top: var(--space-3); font-size: var(--fs-sm); }
+  .hero__cta { margin-top: var(--space-4); }
+  .hero__meta { margin-top: var(--space-5); gap: var(--space-5) var(--space-6); }
+  .hero__meta-item .num { font-size: var(--fs-sm); }
+  .hero__scroll-hint { display: none; } /* hero is no longer full-viewport-height on mobile */
 }
 
 /* ==========================================================================
@@ -1343,10 +1353,21 @@ section {
   .side-nav__socials svg { width: 18px; height: 18px; }
 
   .hero { padding-top: 0; }
-  .hero__grid { grid-template-columns: 1.15fr 0.85fr; gap: var(--space-9); }
+  .hero__grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-areas: "identity-text portrait" "copy portrait";
+    gap: var(--space-9);
+  }
+  /* Unwrap the mobile identity row so its two children can be placed
+     independently in the desktop grid (text in the left column, photo
+     in the right), instead of staying locked together in one row. */
+  .hero__identity { display: contents; }
+  .hero__identity-text { grid-area: identity-text; }
+  .hero__copy { grid-area: copy; }
   .hero__portrait {
-    order: 0;
+    grid-area: portrait;
     justify-self: end;
+    align-self: center;
     width: 100%;
     max-width: 380px;
     height: auto;

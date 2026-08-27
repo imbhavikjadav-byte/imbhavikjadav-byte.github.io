@@ -102,10 +102,22 @@
   <!-- ============ HERO ============ -->
   <section class="hero" id="hero">
     <div class="container hero__grid">
+      <div class="hero__identity">
+        <div class="hero__portrait">
+          <img src="assets/img/profile-photo.jpg" alt="Bhavik Jadav" loading="eager" width="380" height="475"
+            onerror="this.parentElement.classList.add('hero__portrait--fallback'); this.remove();">
+          <svg class="hero__portrait-fallback" viewBox="0 0 200 200" width="55%" aria-hidden="true" fill="none" stroke="#c8842c" stroke-width="1.2">
+            <circle cx="100" cy="72" r="38"/>
+            <path d="M30 180c0-45 31-72 70-72s70 27 70 72"/>
+          </svg>
+        </div>
+        <div class="hero__identity-text">
+          <p class="hero__eyebrow"><span class="dot"></span>Norwich, United Kingdom</p>
+          <h1 class="hero__name" id="heroName">Bhavik Jadav</h1>
+          <p class="hero__title" id="heroTitle">Tech Lead / Team Lead</p>
+        </div>
+      </div>
       <div class="hero__copy">
-        <p class="hero__eyebrow"><span class="dot"></span>Norwich, United Kingdom</p>
-        <h1 class="hero__name" id="heroName">Bhavik Jadav</h1>
-        <p class="hero__title" id="heroTitle">Tech Lead / Team Lead</p>
         <p class="hero__stack" id="heroStack"></p>
         <p class="hero__pitch" id="heroPitch"></p>
         <div class="hero__cta">
@@ -117,14 +129,6 @@
           <div class="hero__meta-item"><span class="num">Fintech &amp; Health</span><span class="label">Domain depth</span></div>
           <div class="hero__meta-item"><span class="num">Enterprise-Grade</span><span class="label">Build standard</span></div>
         </div>
-      </div>
-      <div class="hero__portrait">
-        <img src="assets/img/profile-photo.jpg" alt="Bhavik Jadav" loading="eager" width="380" height="475"
-          onerror="this.parentElement.classList.add('hero__portrait--fallback'); this.remove();">
-        <svg class="hero__portrait-fallback" viewBox="0 0 200 200" width="55%" aria-hidden="true" fill="none" stroke="#c8842c" stroke-width="1.2">
-          <circle cx="100" cy="72" r="38"/>
-          <path d="M30 180c0-45 31-72 70-72s70 27 70 72"/>
-        </svg>
       </div>
     </div>
     <a href="#about" class="hero__scroll-hint" aria-label="Scroll to About section">
