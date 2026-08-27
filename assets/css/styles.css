@@ -365,9 +365,11 @@ section {
 
 .hero__grid {
   display: grid;
-  gap: var(--space-6);
+  gap: var(--space-8);
   align-items: center;
 }
+
+.hero__content { min-width: 0; }
 
 /* Mobile/tablet: photo sits beside the name/title in one compact row */
 .hero__identity {
@@ -377,29 +379,35 @@ section {
 }
 .hero__identity-text { min-width: 0; }
 
-/* Mobile/tablet: small portrait sits beside the name/title */
+/* Shared portrait styling — two instances exist (inline for mobile/tablet,
+   desktop for the large right-column box), toggled by breakpoint below. */
 .hero__portrait {
-  width: 88px;
-  height: auto;
-  aspect-ratio: 4/5;
-  border-radius: var(--radius-md);
   overflow: hidden;
   background: linear-gradient(160deg, var(--color-navy-700), var(--color-navy-800));
-  border: 2px solid rgba(200, 132, 44, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
 }
 .hero__portrait img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: var(--radius-lg);
 }
 .hero__portrait-fallback { display: none; }
 .hero__portrait--fallback .hero__portrait-fallback { display: block; opacity: 0.35; }
+
+.hero__portrait--inline {
+  width: 88px;
+  height: auto;
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-md);
+  border: 2px solid rgba(200, 132, 44, 0.5);
+  flex-shrink: 0;
+}
+.hero__portrait--inline img { border-radius: var(--radius-md); }
+
+.hero__portrait--desktop { display: none; }
 
 .hero__eyebrow {
   color: var(--color-accent);
@@ -1239,7 +1247,8 @@ section {
     padding-top: calc(64px + var(--space-5));
     padding-bottom: var(--space-5);
   }
-  .hero__portrait { width: 64px; border-radius: var(--radius-sm); }
+  .hero__portrait--inline { width: 64px; border-radius: var(--radius-sm); }
+  .hero__portrait--inline img { border-radius: var(--radius-sm); }
   .hero__eyebrow { font-size: 0.6875rem; }
   .hero__name { font-size: var(--fs-lg); margin-top: var(--space-1); }
   .hero__title { font-size: var(--fs-sm); margin-top: 2px; }
@@ -1353,35 +1362,24 @@ section {
   .side-nav__socials svg { width: 18px; height: 18px; }
 
   .hero { padding-top: 0; }
-  .hero__grid {
-    grid-template-columns: 1.15fr 0.85fr;
-    grid-template-areas: "identity-text portrait" "copy portrait";
-    gap: var(--space-9);
-  }
-  /* Unwrap the mobile identity row so its two children can be placed
-     independently in the desktop grid (text in the left column, photo
-     in the right), instead of staying locked together in one row. */
-  .hero__identity { display: contents; }
-  .hero__identity-text { grid-area: identity-text; }
-  .hero__copy { grid-area: copy; }
-  .hero__portrait {
-    grid-area: portrait;
+  .hero__grid { grid-template-columns: 1.15fr 0.85fr; gap: var(--space-9); }
+
+  /* Desktop uses its own dedicated portrait — original design, unaffected
+     by the mobile/tablet row layout. The inline (mobile) portrait inside
+     .hero__identity is hidden here instead. */
+  .hero__portrait--inline { display: none; }
+  .hero__portrait--desktop {
+    display: flex;
     justify-self: end;
-    align-self: center;
     width: 100%;
     max-width: 380px;
     height: auto;
     aspect-ratio: 4/5;
     border-radius: var(--radius-lg);
-    background: linear-gradient(160deg, var(--color-navy-700), var(--color-navy-800));
     border: 1px solid rgba(255,255,255,0.12);
     position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
-  .hero__portrait img { border-radius: var(--radius-lg); }
+  .hero__portrait--desktop img { border-radius: var(--radius-lg); }
 
   .about__grid { grid-template-columns: 1fr 1fr; gap: var(--space-9); }
 
