@@ -1247,15 +1247,29 @@ section {
     padding-top: calc(64px + var(--space-5));
     padding-bottom: var(--space-6);
   }
-  .hero__portrait--inline { width: 64px; border-radius: var(--radius-sm); }
+  .hero__identity {
+    gap: var(--space-5);
+    padding-bottom: var(--space-5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .hero__portrait--inline { width: 68px; border-radius: var(--radius-sm); }
   .hero__portrait--inline img { border-radius: var(--radius-sm); }
   .hero__eyebrow { font-size: 0.6875rem; }
-  .hero__name { font-size: var(--fs-lg); margin-top: var(--space-1); }
-  .hero__title { font-size: var(--fs-sm); margin-top: 2px; }
-  .hero__stack { margin-top: var(--space-4); }
+  .hero__name { font-size: var(--fs-lg); margin-top: var(--space-2); line-height: 1.2; }
+  .hero__title { font-size: var(--fs-sm); margin-top: var(--space-1); }
+  .hero__stack { margin-top: var(--space-5); }
   .hero__pitch { margin-top: var(--space-3); font-size: var(--fs-sm); }
   .hero__cta { margin-top: var(--space-4); }
-  .hero__meta { margin-top: var(--space-5); gap: var(--space-5) var(--space-6); }
+
+  /* 2x2 grid instead of flex-wrap — four stat tiles now, and a fixed
+     grid keeps them evenly aligned instead of wrapping unpredictably. */
+  .hero__meta {
+    margin-top: var(--space-6);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5) var(--space-4);
+  }
+  .hero__meta-item { max-width: none; white-space: normal; }
   .hero__meta-item .num { font-size: var(--fs-sm); }
   .hero__scroll-hint { display: none; } /* hero is no longer full-viewport-height on mobile */
 
@@ -1291,6 +1305,15 @@ section {
   .back-to-top { right: var(--space-7); bottom: var(--space-7); }
 
   body { padding-bottom: 0; } /* bottom-nav is mobile-only, no clearance needed here */
+
+  /* 4 stat tiles: a 2x2 grid reads more balanced here than a 3+1 flex-wrap */
+  .hero__meta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6) var(--space-7);
+    max-width: 460px;
+  }
+  .hero__meta-item { max-width: none; }
 
   section { scroll-margin-top: 0; } /* no fixed top bar on desktop — side-nav doesn't overlap content */
 
