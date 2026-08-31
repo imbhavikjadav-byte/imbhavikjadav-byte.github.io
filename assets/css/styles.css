@@ -371,11 +371,16 @@ section {
 
 .hero__content { min-width: 0; }
 
-/* Mobile/tablet: photo sits beside the name/title in one compact row */
+/* Mobile/tablet: photo sits beside the name/title in one compact row.
+   Desktop: just the eyebrow/name/title block (photo lives separately in
+   the right-column .hero__portrait--desktop). Either way, a divider
+   underneath separates identity from the pitch/CTA/stats below it. */
 .hero__identity {
   display: flex;
   align-items: center;
   gap: var(--space-4);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .hero__identity-text { min-width: 0; }
 
@@ -1247,11 +1252,7 @@ section {
     padding-top: calc(64px + var(--space-5));
     padding-bottom: var(--space-6);
   }
-  .hero__identity {
-    gap: var(--space-5);
-    padding-bottom: var(--space-5);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
+  .hero__identity { gap: var(--space-5); }
   .hero__portrait--inline { width: 68px; border-radius: var(--radius-sm); }
   .hero__portrait--inline img { border-radius: var(--radius-sm); }
   .hero__eyebrow { font-size: 0.6875rem; }
