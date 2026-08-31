@@ -53,8 +53,7 @@ const PORTFOLIO_DATA = {
       current: false,
       points: [
         "Led a team of 8 engineers delivering enhancements to enterprise healthcare systems",
-        "Integrated eCRNow (Java-based reporting system) with EHR using FHIR APIs for COVID/lab reporting",
-        "Developed features for Paragon EHR, focusing on interoperability (FHIR) and clinical data systems",
+        "Integrated eCRNow (Java-based reporting system) with EHR using FHIR APIs for COVID/lab reporting, and developed FHIR-based interoperability features for Paragon EHR and clinical data systems",
         "Conducted code reviews, mentoring, and process improvements",
         "Worked closely with product and support teams to resolve production issues",
         "Built and maintained systems for auditing, upgrades, and healthcare data processing",
