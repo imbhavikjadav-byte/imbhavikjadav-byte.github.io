@@ -34,7 +34,7 @@ const PORTFOLIO_DATA = {
         "Led delivery of customer-facing digital journeys used by hundreds of thousands of UK customers",
         "Managed a cross-functional Agile team ensuring high-quality, scalable releases",
         "Rebuilt core navigation architecture for complex journeys",
-        "Significantly reduced user drop-off and error rates through targeted UX and performance improvements",
+        "Reduced user drop-off and error rates by 50%+",
         "Designed and implemented a real-time Splunk dashboard enabling monitoring of failures and business metrics",
         "Identified user friction points and improved journey performance",
         "Identified and resolved critical production issues, improving conversion rates and platform stability",
