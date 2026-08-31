@@ -259,6 +259,11 @@ const PORTFOLIO_DATA = {
     }
   ],
 
+  education: [
+    { degree: "B.Tech in Information Technology", institution: "Nirma University", location: "Ahmedabad, India", period: "Jul 2013 – Jun 2016" },
+    { degree: "Diploma in Information Technology", institution: "Gujarat Technological University", location: "Ahmedabad, India", period: "Jun 2010 – Jun 2013" }
+  ],
+
   courses: [
     { title: "Programming in C# – Exam 483", issuer: "Microsoft", date: "May 2018" },
     { title: "Developing ASP.NET MVC Applications – Exam 486", issuer: "Microsoft", date: "Jun 2018" }

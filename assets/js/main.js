@@ -52,7 +52,9 @@
     target:
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>',
     bulb:
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M8 14a5.5 5.5 0 1 1 8 0c-.7.7-1.4 1.7-1.5 2.5H9.5C9.4 15.7 8.7 14.7 8 14Z"/></svg>'
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M8 14a5.5 5.5 0 1 1 8 0c-.7.7-1.4 1.7-1.5 2.5H9.5C9.4 15.7 8.7 14.7 8 14Z"/></svg>',
+    cap:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 4 9 5-9 5-9-5 9-5Z"/><path d="M6.5 11v5c0 1.4 2.5 2.5 5.5 2.5s5.5-1.1 5.5-2.5v-5"/></svg>'
   };
   function ICONSFallback() {
     return '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>';
@@ -216,6 +218,25 @@
         <span class="icon" aria-hidden="true">${ICONS[a.icon] || ICONS.star}</span>
         <span class="award-card__count">${a.count}</span>
         <span class="award-card__name">${escapeHtml(a.name)}</span>
+      </div>`
+      )
+      .join("");
+  }
+
+  /* ---------------- Render: Education ---------------- */
+  function renderEducation() {
+    const el = $("#educationGrid");
+    const list = PORTFOLIO_DATA.education || [];
+    el.innerHTML = list
+      .map(
+        (e) => `
+      <div class="education-card reveal">
+        <span class="icon" aria-hidden="true">${ICONS.cap}</span>
+        <div class="education-card__body">
+          <h3 class="education-card__degree">${escapeHtml(e.degree)}</h3>
+          <p class="education-card__institution">${escapeHtml(e.institution)}</p>
+          <p class="education-card__meta">${escapeHtml(e.location)} · ${escapeHtml(e.period)}</p>
+        </div>
       </div>`
       )
       .join("");
@@ -436,6 +457,7 @@
   function init() {
     renderProfile();
     renderExperience();
+    renderEducation();
     renderSkills();
     renderPersonalSkills();
     renderAwards();
