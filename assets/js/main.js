@@ -93,7 +93,7 @@
     $("#heroPitch").textContent = p.pitch;
     $("#aboutSummary").textContent = p.summary;
     $("#footerName").textContent = `© ${new Date().getFullYear()} ${p.name}`;
-    document.title = `${p.name} — ${p.title}`;
+    document.title = `${p.name} - ${p.title}`;
 
     const li = $("#linkedinLinkSide");
     if (li) li.href = p.linkedin;
